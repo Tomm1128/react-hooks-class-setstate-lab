@@ -6,6 +6,7 @@ class Item extends React.Component {
   }
 
   handleAddToCartClick = () => {
+    console.log(this.props.name)
     this.setState({
       isInCart: !this.state.isInCart,
     })
@@ -14,8 +15,8 @@ class Item extends React.Component {
   render() {
     return (
       <li className={this.state.isInCart ? "in-cart" : ""}>
-        <span>{this.name}</span>
-        <span className="category">{this.category}</span>
+        <span>{this.props.name}</span>
+        <span className="category">{this.props.category}</span>
         <button
           className={this.state.isInCart ? "remove" : "add"}
           onClick={this.handleAddToCartClick}
