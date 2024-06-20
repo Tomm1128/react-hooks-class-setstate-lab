@@ -1,11 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 import ShoppingList from "./ShoppingList"
 import itemData from "../data/items"
 
 class App extends React.Component {
-  // const [items, setItems] = useState(itemData);
-  // const [isDarkMode, setIsDarkMode] = useState(false);
-
   state = {
     items: itemData,
     isDarkMode: false,
